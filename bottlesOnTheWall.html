@@ -6,19 +6,19 @@
         <title>Bottles on the wall</title>
     </head>
     <body>
-        <p id="start">Bottles on the wall</p>
+        <p id="startText">Bottles on the wall</p>
 
         <script>
-            let startBottle = prompt("How many bottle of beers on the wall");
-            startText = document.getElementById(start);
-            start.innerHTML = `${startBottle} Bottles on the wall`;
+            let startBottle = prompt("How many bottle of beers on the wall"); //how you get your value and store it
+            start = document.getElementById(startText); //pulls p to the DOM so we can manipulate it
+            start.innerHTML = `${startBottle} Bottles on the wall`; // adds the text to what we just pulled
 
             let minusBottles = --startBottle;
-            // console.log(minusBottles); Testting
-            let minusText = document.getElementById("start");
-            let newMinusText = document.createElement("p");
-            newMinusText.innerText = `${minusBottles} Bottles on the wall`;
-            minusText.append(newMinusText);
+            // console.log(minusBottles); Testting, should subtract
+            let minusText = document.getElementById("start"); // this pulls paragraph w/ ID=start to the document so we can manipulate it
+            let newMinusText = document.createElement("p"); // this creates a new paragraph
+            newMinusText.innerText = `${minusBottles} Bottles on the wall`; //this inputs text on the new paragraph you just made
+            minusText.append(newMinusText); // this attaches newMinusText (paragraph we created and then wrote in) to minusText (allows us to attach to this element because we pulled it to the DOM to manipulate)
         </script>
     </body>
 </html>
