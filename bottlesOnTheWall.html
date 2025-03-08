@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bottles on the wall</title>
+    </head>
+    <body>
+        <p id="start">Bottles on the wall</p>
+
+        <script>
+            let startBottle = prompt("How many bottle of beers on the wall");
+            startText = document.getElementById(start);
+            start.innerHTML = `${startBottle} Bottles on the wall`;
+
+            let minusBottles = --startBottle;
+            // console.log(minusBottles); Testting
+            let minusText = document.getElementById("start");
+            let newMinusText = document.createElement("p");
+            newMinusText.innerText = `${minusBottles} Bottles on the wall`;
+            minusText.append(newMinusText);
+        </script>
+    </body>
+</html>
